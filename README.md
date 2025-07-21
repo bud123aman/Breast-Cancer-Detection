@@ -28,26 +28,35 @@ This repository contains the code for a breast cancer detection system built wit
 
 ---
 
-
 ## Model Performance
 
-The model demonstrates strong performance in detecting breast cancer:
+The model demonstrates strong performance in detecting breast cancer, with a particular focus on **accuracy** as a key evaluation metric. Accuracy measures the proportion of total predictions that were correct.
 
-* **Accuracy (K-Fold Cross-Validation):** The model achieved an average accuracy of **96.70%** across 10 folds, indicating good generalization capabilities.
-* **Test Accuracy:** On the held-out test set, the model achieved an accuracy of **95.62%**.
-* **Confusion Matrix:**
+* **Overall Accuracy:** The model achieved an impressive accuracy, indicating its ability to correctly classify both benign and malignant cases.
+    * **Accuracy (K-Fold Cross-Validation):** Through 10-fold cross-validation, the model showed an average accuracy of **96.70%**. This method provides a more robust estimate of the model's performance on unseen data by splitting the training data into multiple folds and training/testing on different combinations. This helps to reduce bias and variance in the accuracy estimation.
+    * **Test Accuracy:** On the independent test set, the model achieved an accuracy of **95.62%**. This score reflects how well the trained model generalizes to new, unobserved data.
+
+* **Confusion Matrix Analysis:**
+    The confusion matrix provides a detailed breakdown of the model's predictions:
+
     ```
     [[84  3]
      [ 3 47]]
     ```
-    This matrix shows:
-    * **84** true negatives (correctly predicted as benign)
-    * **47** true positives (correctly predicted as malignant)
-    * **3** false positives (incorrectly predicted as malignant)
-    * **3** false negatives (incorrectly predicted as benign)
 
-These results highlight the model's ability to accurately distinguish between benign and malignant cases with a low number of misclassifications.
+    From this matrix, we can interpret:
+    * **True Negatives (TN):** 84 instances were correctly predicted as benign (non-cancerous).
+    * **False Positives (FP):** 3 instances were incorrectly predicted as malignant (cancerous) when they were actually benign. This is also known as a **Type I error**.
+    * **False Negatives (FN):** 3 instances were incorrectly predicted as benign (non-cancerous) when they were actually malignant. This is also known as a **Type II error**, and in medical contexts like cancer detection, this can be particularly critical.
+    * **True Positives (TP):** 47 instances were correctly predicted as malignant (cancerous).
 
+    **Understanding Accuracy from the Confusion Matrix:**
+    Accuracy is calculated as: $$(TP + TN) / (TP + TN + FP + FN)$$
+    For our model, this is: $$(47 + 84) / (47 + 84 + 3 + 3) = 131 / 137 \approx 0.9562$$ or **95.62%**.
+
+These results collectively highlight the model's high predictive power and its capability to accurately distinguish between benign and malignant cases, minimizing critical errors where possible.
+
+---
 ---
 
 ## Dataset
