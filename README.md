@@ -28,45 +28,6 @@ This repository contains the code for a breast cancer detection system built wit
 
 ---
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/bud123aman/Breast-Cancer-Detection.git](https://github.com/bud123aman/Breast-Cancer-Detection.git)
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd Breast-Cancer-Detection
-    ```
-3.  **Install the required libraries:**
-    ```bash
-    pip install pandas scikit-learn
-    ```
-4.  **Ensure you have the `breast_cancer.csv` dataset** in the project directory.
-
----
-
-## Usage
-
-You can run the Jupyter Notebook directly or execute the Python code cells:
-
-1.  **Open the Jupyter Notebook:**
-    ```bash
-    jupyter notebook Breast_Cancer_Detection.ipynb
-    ```
-    Then, run all the cells in the notebook.
-
-2.  **Alternatively, run the Python script (if converted):**
-    If you've converted the notebook to a Python script (e.g., `main.py`), you can run it using:
-    ```bash
-    python main.py
-    ```
-
-The output will display the confusion matrix, the accuracy calculated using K-Fold Cross-Validation, and the test accuracy.
-
----
 
 ## Model Performance
 
