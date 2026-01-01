@@ -33,15 +33,15 @@ This repository contains the code for a breast cancer detection system built wit
 The model demonstrates strong performance in detecting breast cancer, with a particular focus on **accuracy** as a key evaluation metric. Accuracy measures the proportion of total predictions that were correct.
 
 * **Overall Accuracy:** The model achieved an impressive accuracy, indicating its ability to correctly classify both benign and malignant cases.
-    * **Accuracy (K-Fold Cross-Validation):** Through 10-fold cross-validation, the model showed an average accuracy of **96.70%**. This method provides a more robust estimate of the model's performance on unseen data by splitting the training data into multiple folds and training/testing on different combinations. This helps to reduce bias and variance in the accuracy estimation.
-    * **Test Accuracy:** On the independent test set, the model achieved an accuracy of **95.62%**. This score reflects how well the trained model generalizes to new, unobserved data.
+    * **Accuracy (K-Fold Cross-Validation):** Through 10-fold cross-validation, the model showed an average accuracy of **96.77%**. This method provides a more robust estimate of the model's performance on unseen data by splitting the training data into multiple folds and training/testing on different combinations. This helps to reduce bias and variance in the accuracy estimation.
+    * **Test Accuracy:** On the independent test set, the model achieved an accuracy of **97.14%**. This score reflects how well the trained model generalizes to new, unobserved data.
 
 * **Confusion Matrix Analysis:**
     The confusion matrix provides a detailed breakdown of the model's predictions:
 
     ```
-    [[84  3]
-     [ 3 47]]
+    [[83  2]
+     [ 2 53]]
     ```
 
     From this matrix, we can interpret:
@@ -52,7 +52,7 @@ The model demonstrates strong performance in detecting breast cancer, with a par
 
     **Understanding Accuracy from the Confusion Matrix:**
     Accuracy is calculated as: $$(TP + TN) / (TP + TN + FP + FN)$$
-    For our model, this is: $$(47 + 84) / (47 + 84 + 3 + 3) = 131 / 137 \approx 0.9562$$ or **95.62%**.
+    For our model, this is: $$(53 + 83) / (53 + 83 + 2 + 2) = 136 / 140 \approx 0.9714 $$ or **97.14%**.
 
 These results collectively highlight the model's high predictive power and its capability to accurately distinguish between benign and malignant cases, minimizing critical errors where possible.
 
@@ -63,7 +63,7 @@ These results collectively highlight the model's high predictive power and its c
 
 The project utilizes the **Breast Cancer Wisconsin (Original) Dataset**, obtained from the UCI Machine Learning Repository. This dataset contains various features computed from a digitized image of a fine needle aspirate (FNA) of a breast mass, used to predict whether a tumor is benign or malignant.
 
-You can find more information about the dataset [here](https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original). Please ensure the `breast_cancer.csv` file in your project directory is derived from this dataset.
+You can find more information about the dataset [here](https://www.kaggle.com/datasets/mariolisboa/breast-cancer-wisconsin-original-data-set). Please ensure the `breast_cancer_bd.csv` file in your project directory is derived from this dataset.
 
 ---
 ## Contributing
